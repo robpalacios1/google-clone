@@ -9,7 +9,7 @@ import { Button } from '@material-ui/core'
 /** CSS */
 import './Search.css'
 
-const Search = () => {
+const Search = ({hideButtons = false}) => {
 
     const [input, setInput] = useState('')
     const history = useHistory();
@@ -30,16 +30,42 @@ const Search = () => {
                 <MicIcon />
             </div>
 
-            <div className="search__buttons">
-                <Button
-                    onClick={search}
-                    type='submit'
-                    variant="outlined"
-                >
-                    Google Search
-                </Button>
-                <Button variant="outlined">I'm Feeling Lucky</Button>
-            </div>
+            {
+                !hideButtons ? (
+                    <div className="search__buttons">
+                        <Button
+                            onClick={search}
+                            type='submit'
+                            variant="outlined"
+                        >
+                            Google Search
+                        </Button>
+                        <Button
+                            variant="outlined"
+                        >
+                            I'm Feeling Lucky
+                        </Button>
+                    </div>
+
+                ):(
+                    <div className="search__buttons">
+                        <Button
+                            className="search__buttonsHidden"
+                            onClick={search}
+                            type='submit'
+                            variant="outlined"
+                        >
+                            Google Search
+                        </Button>
+                        <Button
+                            className="search__buttonsHidden"
+                            variant="outlined"
+                        >
+                            I'm Feeling Lucky
+                        </Button>
+                    </div>
+                )
+            }
         </form>
     )
 }
