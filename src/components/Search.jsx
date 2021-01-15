@@ -48,6 +48,7 @@ const Search = ({hideButtons = false}) => {
                     </div>
 
                 ):(
+
                     <div className="search__buttons">
                         <Button
                             className="search__buttonsHidden"
