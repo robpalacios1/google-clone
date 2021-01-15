@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 /***** Icons *****/
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
-import { Button } from '@material-ui/core';
+import { Button } from '@material-ui/core'
 
 /** CSS */
 import './Search.css'
