@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { useStateValue } from '../StateProvider'
+import { actionTypes} from '../reducer'
 
 /***** Icons *****/
 import SearchIcon from '@material-ui/icons/Search';
@@ -11,11 +13,20 @@ import './Search.css'
 
 const Search = ({hideButtons = false}) => {
 
+    const [{}, dispatch] = useStateValue('');
+
     const [input, setInput] = useState('')
     const history = useHistory();
 
     const search = (event) => {
         event.preventDefault();
+
+        dispatch({
+            type: actionTypes.SET_SEARCH_TERM,
+            term: input
+        })
+
+        // do something with input...
         history.push('/search')
     }
 
