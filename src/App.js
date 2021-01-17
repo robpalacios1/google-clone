@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom'
 
 /***** Components *****/
 import Home from './components/Home'
+import SearchPage from './components/SearchPage'
 
 /***** CSS *****/
 import './App.css';
@@ -18,7 +19,7 @@ function App() {
           </Route>
 
           <Route path='/search'>
-            <h1>This is the search page</h1>
+            <SearchPage />
           </Route>
 
 
