@@ -29,7 +29,7 @@ const Searchpage = () => {
     //const { data } = useGoogleSearch(term);
 
     const data = Response;
-
+     console.log(data);
     return (
         <div className="searchPage">
             <div className="searchPage__header">
@@ -83,10 +83,18 @@ const Searchpage = () => {
                     </div>
                 </div>
             </div>
-
-            <div className="searchPage__results">
-
-            </div>
+            {
+                true && (
+                    <div
+                        className="searchPage__results">
+                        <p
+                            className="searchPage__resultCount"
+                        >
+                            About {data?.searchInformation.formattedTotalResults} results (0.3 seconds) for Tesla
+                        </p>
+                    </div>
+                )
+            }
         </div>
     )
 }
