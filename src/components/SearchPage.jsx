@@ -90,7 +90,7 @@ const Searchpage = () => {
                         <p
                             className="searchPage__resultCount"
                         >
-                            About {data?.searchInformation.formattedTotalResults} results (0.3 seconds) for Tesla
+                            About 30.000 results (0.3 seconds) for Tesla
                         </p>
                     </div>
                 )
