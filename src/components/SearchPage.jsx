@@ -22,7 +22,6 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import './SearchPage.css'
 
 
-
 const Searchpage = () => {
 
     const [ {term}, dispatch] = useStateValue();
