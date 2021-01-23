@@ -18,7 +18,7 @@ import RoomIcon from '@material-ui/icons/Room'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 
 
-
+/***** CSS *****/
 import './SearchPage.css'
 
 
