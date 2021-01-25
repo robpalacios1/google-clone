@@ -89,7 +89,7 @@ const Searchpage = () => {
                         <p
                             className="searchPage__resultCount"
                         >
-                            About {data.searchInformation.formattedTotalResults} results ({data.searchInformation.formattedSearchTime}) for {term}
+                            About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime}) for {term}
                         </p>
 
                     </div>
