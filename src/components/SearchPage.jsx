@@ -24,10 +24,10 @@ import './SearchPage.css'
 
 const Searchpage = () => {
 
-    const [ {term}, dispatch] = useStateValue();
-    //const { data } = useGoogleSearch(term);
+    const [ { term }, dispatch] = useStateValue();
+    const { data } = useGoogleSearch(term);
 
-    const data = Response;
+    //const data = Response;
      console.log(data);
     return (
         <div className="searchPage">
@@ -89,8 +89,9 @@ const Searchpage = () => {
                         <p
                             className="searchPage__resultCount"
                         >
-                            About 30.000 results (0.3 seconds) for Tesla
+                            About {data.searchInformation.formattedTotalResults} results ({data.searchInformation.formattedSearchTime}) for {term}
                         </p>
+
                     </div>
                 )
             }
