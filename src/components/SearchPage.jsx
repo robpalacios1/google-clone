@@ -5,11 +5,11 @@ import Response from '../response'
 import { Link } from 'react-router-dom'
 
 
-
+/***** Components *****/
 import Search from '../components/Search'
 
 
-
+/** Icons */
 import SearchIcon from '@material-ui/icons/Search'
 import DescriptionIcon from '@material-ui/icons/Description'
 import ImageIcon from '@material-ui/icons/Image'
