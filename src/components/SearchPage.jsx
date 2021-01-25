@@ -91,7 +91,13 @@ const Searchpage = () => {
                         >
                             About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime}) for {term}
                         </p>
-
+                        {
+                            data?.items.map(item => (
+                                <div className="searchPage__results">
+                                    {item.displayLink}
+                                </div>
+                            ))
+                        }
                     </div>
                 )
             }
