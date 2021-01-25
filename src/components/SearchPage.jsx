@@ -83,7 +83,7 @@ const Searchpage = () => {
                 </div>
             </div>
             {
-                true && (
+                term && (
                     <div
                         className="searchPage__results">
                         <p
